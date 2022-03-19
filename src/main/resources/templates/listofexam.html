@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>List listofexams</title>
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container text-center">
+	<div>
+		<form th:action="@{/logout}" method="post">
+			<p>
+				Welcome
+			</p>
+		</form>
+	</div>
+	<div>
+		<h1>List of Exams</h1>
+	</div>
+	
+	<div>
+		<table class="table table-striped table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th>Exam code</th>
+					<th>Exam Name</th>
+					<th>Duration</th>
+					<th>Price</th>
+					<th>Passing score</th>
+					<th>Link</th>
+					<th>Update</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="listofexam: ${listexam}">
+					<td th:text="${listofexam.examcode}">Exam code</td>
+					<td th:text="${listofexam.examname}">Exam Name</td>
+					<td th:text="${listofexam.duration}">Duration</td>
+					<td th:text="${listofexam.price}">Price</td>
+					<td th:text="${listofexam.pscore}">Passing score</td>
+					<td><a th:href="@{/javadetail}">Exam Details</a></td>
+					<td><a th:href="@{/Updatedetails}">UPDATE DETAILS</a><td>		
+							
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>
+

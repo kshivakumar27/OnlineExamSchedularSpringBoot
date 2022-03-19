@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Details</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div align="center">
+        <h1>Update Details</h1>
+        <br />
+        <form action="#" th:action="@{/save}" th:object="${listofexam}" method="post">
+ 
+           	<div class="m-3">
+			<div class="form-group row">
+				<label class="col-4 col-form-label"> Exam Code</label>
+				
+				<div class="col-8">
+					<input type="number" name="examcode" class="form-control" />
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Duration </label>
+				<div class="col-8">
+					<input type="number" name="duration" class="form-control" 
+							 />
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Exam Name </label>
+				<div class="col-8">
+					<input type="text" name="examname" class="form-control" 
+							/>
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Price </label>
+				<div class="col-8">
+					<input type="number" name="price" class="form-control" 
+						 />
+				</div>
+			</div>
+			
+			
+			<div class="form-group row">
+				<label class="col-4 col-form-label">PassingScore </label>
+				<div class="col-8">
+					<input type="number" name="pscore" class="form-control" 
+						 />
+				</div>
+		
+				
+			<br><button type="submit" class="btn btn-primary">UPDATE</button>
+			
+			
+				
+			
+				
+				
+        </form>
+    </div>
+</body>
+</html>

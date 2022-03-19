@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+ <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://thumbs.dreamstime.com/z/online-exam-vector-website-landing-page-design-template-web-mobile-site-development-quiz-testing-questionnaire-concept-147597480.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+     <div>
+		<form th:action="@{/logout}" method="post">
+			<p>
+				Welcome <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+			</p>
+			<input type="submit" value="log Out" />
+		</form>
+	</div>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    
+  </div>
+ 
+
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+
+
+<!-- Menu Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Online Exam Schedule System </span></h5>
+   
+    <img src="https://secondary.hcdsb.org/loyola/wp-content/uploads/sites/8/2019/12/exam-schedule.png" class="w3-image" style="width:100%">
+    <center><h1>Upcoming Exams</h1><br>
+
+    
+    <a th:href="java">JAVA CERTIFICATION</a><br>
+    <a href="phps">PHP CERTIFICATION</a><br>
+   <a href="springboot">SPRINGBOOT CERTIFICATION</a><br>
+    <a href="c++">C++ CERTIFICATION</a><br>
+    
+    
+      
+       
+       
+    </center>
+  </div>
+</div>
+    
+
+<!-- Contact/Area Container -->
+
+
+<!-- End page content -->
+</div>
+
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top white-section" id="footer">
+    <div class="container-fluid">
+    <center>
+    <a href="https://www.facebook.com/">  <i class="social-icon fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com/">  <i class="social-icon fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/">  <i class="social-icon fab fa-instagram"></i></a>
+    <a href="https://www.gmail.com/">  <i class="social-icon fas fa-envelope"></i></a>
+      <p>© Copyright 2021 @Exam Center</p></center>
+    </div>
+  </footer>
+ 
+
+
+</body>
+</html>
